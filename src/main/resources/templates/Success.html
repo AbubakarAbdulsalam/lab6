@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"/>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <p th:text="book.id"> This book's id is</p>
+    <tr th:each=" buddy : ${book.getBuddies()}">
+        <td th:text="${buddy.id}"> </td>
+        <td th:text="${buddy.name}"> </td>
+    </tr>
+</table>
+</body>
+</html>
