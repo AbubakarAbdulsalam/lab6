@@ -2,14 +2,19 @@ import SomePackage.BuddyInfo;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 import java.util.List;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class BuddyInfoTest {
     private BuddyInfo buddy;
     private String name;
     private int num;
+
+
 
     @Before
     public void setUp() throws Exception {
@@ -48,6 +53,7 @@ public class BuddyInfoTest {
         buddy.setName(newName);
         assert (buddy.getName().equals(newName));
     }
+    /*
 
     @Test
     public void performJPA() {
@@ -97,6 +103,6 @@ public class BuddyInfoTest {
         em.close();
 
         emf.close();
-    }
+    }*/
 }
 
